@@ -1,12 +1,26 @@
+.ask-share-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 9%;
+    margin-top: 50px;
+}
+
 .menu-container {
     background-color: white;
     height: 60vh;
-    width: 18%;
+    /* width: 18%; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 0.3;
 }
 
 .menu-container-options {
     margin-top: 50px;
+}
+
+.ask-share-content-container {
+    /* width: 60%; */
+    margin: 0 20px;
+    flex: 0.8;
 }

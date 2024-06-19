@@ -1,0 +1,35 @@
+.feed-container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.feed-head-container {
+    display: flex;
+    align-items: center;
+}
+
+.feed-head-container-avatar > img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    border: none;
+}
+
+.feed-head-container-title {
+    margin-left: 20px;
+}
+
+.feed-head-container-title-name {
+    font-weight: 600;
+} 
+
+.feed-head-container-title-designation {
+    font-size: 12px;
+}
+
+.feed-post-content {
+    margin: 20px 0;
+}
