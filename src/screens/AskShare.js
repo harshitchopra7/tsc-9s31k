@@ -6,42 +6,30 @@ import "./AskShare.css";
 // components
 import Feed from "../components/Feed/Feed";
 
+// mock data
+import { feedsMock } from "../mocks/feed";
+
 function AskShare() {
   const [posts, setPosts] = useState([]);
-
-  const array = [
-    {
-      id: "1",
-      title: "Harshit",
-      designation: "sde",
-      content: "hey there",
-    },
-    {
-      id: "2",
-      title: "harsh",
-      designation: "sde 1",
-      content: "hiiiii",
-    },
-  ];
 
   //   array.map((value, index) => console.log("value", value.content));
 
   // api call
-  async function getPosts() {
-    const url = "https://jsonplaceholder.typicode.com/posts";
-    const data = await fetch(url);
-    const response = await data.json();
+  // async function getPosts() {
+  //   const url = "https://jsonplaceholder.typicode.com/posts";
+  //   const data = await fetch(url);
+  //   const response = await data.json();
 
-    setPosts(response);
+  //   setPosts(response);
 
-    console.log("response", response);
+  //   console.log("response", response);
 
-    // response.map((value, index) => console.log("response", value.title));
-  }
+  //   // response.map((value, index) => console.log("response", value.title));
+  // }
 
-  useEffect(() => {
-    getPosts();
-  }, []);
+  // useEffect(() => {
+  //   getPosts();
+  // }, []);
 
   return (
     <div className="ask-share-container">
@@ -70,8 +58,8 @@ function AskShare() {
 
       {/* middle container  */}
       <div className="ask-share-content-container">
-        {posts.map((value, index) => (
-          <Feed key={index} body={value.body} />
+        {feedsMock.map((value, index) => (
+          <Feed key={index} feedsData={value} />
         ))}
       </div>
 

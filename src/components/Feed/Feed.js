@@ -8,25 +8,29 @@ import CommentIcon from "@mui/icons-material/Comment";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 
-function Feed({ title, body }) {
+function Feed({ feedsData }) {
   return (
     <div className="feed-container">
       <div className="feed-head-container">
         <div className="feed-head-container-avatar">
-          <img src="" alt="" />
+          <img src={feedsData.userImage} alt="" />
         </div>
         <div className="feed-head-container-title">
-          <p className="feed-head-container-title-name">Name</p>
-          <p className="feed-head-container-title-designation">Designation</p>
+          <p className="feed-head-container-title-name">{feedsData.userName}</p>
+          <p className="feed-head-container-title-designation">
+            {feedsData.designation}
+          </p>
         </div>
       </div>
 
-      <div className="feed-post-content">{body}</div>
+      <div className="feed-post-content">{feedsData.content}</div>
 
       <div className="feed-post-actions">
         <div className="feed-post-individual-action">
-          <ThumbUpOffAltIcon />
-          <p>Like</p>
+          <ThumbUpOffAltIcon
+            style={{ color: feedsData.isLiked ? "blue" : null }}
+          />
+          <p>Like {feedsData.likeCount}</p>
         </div>
         <div className="feed-post-individual-action">
           <CommentIcon />
