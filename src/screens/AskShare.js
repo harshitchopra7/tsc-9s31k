@@ -34,7 +34,7 @@ function AskShare() {
 
     setPosts(response);
 
-    // console.log("response", response);
+    console.log("response", response);
 
     // response.map((value, index) => console.log("response", value.title));
   }
@@ -71,7 +71,7 @@ function AskShare() {
       {/* middle container  */}
       <div className="ask-share-content-container">
         {posts.map((value, index) => (
-          <Feed />
+          <Feed key={index} body={value.body} />
         ))}
       </div>
 

@@ -33,3 +33,18 @@
 .feed-post-content {
     margin: 20px 0;
 }
+
+.feed-post-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feed-post-individual-action {
+    display: flex;
+    align-items: center;
+}
+
+.feed-post-individual-action > p {
+    margin-left: 5px;
+}
